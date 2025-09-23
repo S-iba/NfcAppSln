@@ -18,12 +18,8 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="Constants\Configs.cs" />
-    <Compile Include="Models\CardInfo.cs" />
-    <Compile Include="Services\CardDataParser.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\RfidCardReader.cs" />
+    <Compile Include="Sensors\RfidReaderSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Card">
