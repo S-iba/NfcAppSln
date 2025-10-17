@@ -7,9 +7,7 @@ using System.Threading;
 
 namespace RfidReader
 {
-    /// <summary>
-    /// Main program class for RFID reader application that continuously monitors for RFID/NFC tags
-    /// </summary>
+
     public class Program
     {
         // Instance of the RFID reader sensor that handles low-level communication with the RFID hardware
@@ -18,9 +16,6 @@ namespace RfidReader
         // Stores the most recently read RFID tag data
         static byte[] _lastReadTag;
 
-        /// <summary>
-        /// Entry point of the application that initializes GPIO and starts the RFID reading thread
-        /// </summary>
         public static void Main()
         {
             // Create GPIO controller to manage hardware pins
@@ -39,9 +34,8 @@ namespace RfidReader
             Thread.Sleep(Timeout.Infinite);
         }
 
-        /// <summary>
-        /// Background worker method that continuously polls for RFID tags
-        /// </summary>
+        // Background worker method that continuously polls for RFID tags
+
         public static void RfidWork()
         {
             while (true)
@@ -49,11 +43,12 @@ namespace RfidReader
                 // Read the ID of any RFID/NFC card in range
                 var id = _rfIdReader.ReadCardNfcId();
                 _lastReadTag = id;
-                
-                // Output the tag ID as a hexadecimal string
-                Debug.WriteLine(BitConverter.ToString(id));
 
-                // Wait for 1 second before next read
+                // Convert to hex if available
+                string hex = (id != null && id.Length > 0) ? BitConverter.ToString(id) : "<no id>";
+
+                // Output to debug
+                Debug.WriteLine(hex);
                 Thread.Sleep(1000);
             }
         }
