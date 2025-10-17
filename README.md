@@ -88,4 +88,4 @@ This project is hosted at: https://github.com/S-iba/NfcAppSln
 
 ## License
 
-This is for educational purpose.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
