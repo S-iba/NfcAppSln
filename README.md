@@ -1,4 +1,7 @@
 # NfcAppTrialSln
+![C#](https://img.shields.io/badge/language-C%23-239120?style=flat&logo=csharp)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet)
+![IoT](https://img.shields.io/badge/category-IoT-0078D4?style=flat)
 
 A .NET nanoFramework application for reading RFID/NFC tags using the MFRC522 RFID module and ESP32.
 
@@ -90,6 +93,3 @@ This project is hosted at: https://github.com/S-iba/NfcAppSln
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-![C#](https://img.shields.io/badge/language-C%23-239120?style=flat&logo=csharp)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet)
-![IoT](https://img.shields.io/badge/category-IoT-0078D4?style=flat)
